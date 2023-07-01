@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.js": "/static/js/main.1ac49170.chunk.js",
+    "main.js.map": "/static/js/main.1ac49170.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ca9b8125.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ca9b8125.js.map",
+    "static/js/2.d1e83b25.chunk.js": "/static/js/2.d1e83b25.chunk.js",
+    "static/js/2.d1e83b25.chunk.js.map": "/static/js/2.d1e83b25.chunk.js.map",
+    "static/js/3.91060295.chunk.js": "/static/js/3.91060295.chunk.js",
+    "static/js/3.91060295.chunk.js.map": "/static/js/3.91060295.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.d1e83b25.chunk.js.LICENSE.txt": "/static/js/2.d1e83b25.chunk.js.LICENSE.txt",
+    "static/media/back-to-results.5afd0eb3.svg": "/static/media/back-to-results.5afd0eb3.svg",
+    "static/media/cancel.ae557971.svg": "/static/media/cancel.ae557971.svg",
+    "static/media/clear-answers.ab2d326e.svg": "/static/media/clear-answers.ab2d326e.svg",
+    "static/media/compact-view.b36c9f54.svg": "/static/media/compact-view.b36c9f54.svg",
+    "static/media/download.313b00ff.svg": "/static/media/download.313b00ff.svg",
+    "static/media/en-flag.a21315c6.svg": "/static/media/en-flag.a21315c6.svg",
+    "static/media/github.10588a6d.svg": "/static/media/github.10588a6d.svg",
+    "static/media/homepage-test-icon.50cab35a.svg": "/static/media/homepage-test-icon.50cab35a.svg",
+    "static/media/manual-questions.0e499341.svg": "/static/media/manual-questions.0e499341.svg",
+    "static/media/menu-mobile.e79d2414.svg": "/static/media/menu-mobile.e79d2414.svg",
+    "static/media/pagination-arrow.e77ea34b.svg": "/static/media/pagination-arrow.e77ea34b.svg",
+    "static/media/pagination-wheel.b700dc06.svg": "/static/media/pagination-wheel.b700dc06.svg",
+    "static/media/pl-flag.8a5a643b.svg": "/static/media/pl-flag.8a5a643b.svg",
+    "static/media/test-done.8136d9e7.svg": "/static/media/test-done.8136d9e7.svg",
+    "static/media/test-not-finished.0ae167f2.svg": "/static/media/test-not-finished.0ae167f2.svg",
+    "static/media/upload.62670cd0.svg": "/static/media/upload.62670cd0.svg",
+    "static/media/wave.e0f01212.svg": "/static/media/wave.e0f01212.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ca9b8125.js",
+    "static/js/2.d1e83b25.chunk.js",
+    "static/js/main.1ac49170.chunk.js"
+  ]
+}
