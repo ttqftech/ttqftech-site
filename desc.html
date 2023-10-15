@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单地说……</title>
+    <style>
+        .pages {
+            height: 100vh;
+            overflow: auto;   
+        }
+        .page {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 20px;
+        }
+        .page p {
+            text-align: center;
+        }
+        .page button {
+            width: 120px;
+            font-size: inherit;
+        }
+        @keyframes jump {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(16px);
+            }
+        }
+        @keyframes circle {
+            from {
+                transform: rotate(0) translateY(60px) rotate(0);
+            }
+            to {
+                transform: rotate(360deg) translateY(60px) rotate(-720deg);
+            }
+        }
+        .specialBtn {
+            line-height: 25px;
+            padding: 6px 8px;
+            border-radius: 5px;
+            color: #fff;
+            /*font-weight: bold;*/
+            text-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+            width: 140px;
+            font-size: 18px;
+            text-decoration: none;
+            border: 1px solid #7cccff;
+            box-shadow: 0 0 0 1px #007ac7, 1px 5px 0 #007ac7, -1px 5px 0 #007ac7, 0 6px 8px rgba(0, 0, 0, .8);
+            background: -webkit-linear-gradient(top, #4db5fe, #3c9be2);
+            background: -moz-linear-gradient(top, #4db5fe, #3c9be2);
+            background: -ms-linear-gradient(top, #4db5fe, #3c9be2);
+            background: -o-linear-gradient(top, #4db5fe, #3c9be2);
+            background: linear-gradient(top, #4db5fe, #3c9be2);
+        }
+        .specialBtn:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            content: "";
+            width: 90px;
+            height: 59px;
+            background: -webkit-radial-gradient(right, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 70%);
+            background: -moz-radial-gradient(right, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 70%);
+            background: -ms-radial-gradient(right, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 70%);
+            background: -o-radial-gradient(right, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 70%);
+            background: radial-gradient(right, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 70%);
+        }
+        a {
+            font-size: 2em;
+        }
+    </style>
+    <script>
+        function init() {
+            const pageDOM = document.getElementById('pages');
+            pageDOM.addEventListener('scroll', (e) => {
+                const st = e.target.scrollTop;
+                const oh = e.target.offsetHeight;
+                if (Math.abs(st / oh - Math.round(st / oh)) > 0.05) {
+                    alert('我不允许你这么翻页🤪');
+                    const pageIndex = Math.round(st / oh);
+                    e.target.scrollTop = pageIndex * oh;
+                }
+            })
+        }
+        window.onload = init;
+        function btn1() {
+            const pageDOM = document.getElementById('pages');
+            pageDOM.scrollTop = pageDOM.scrollTop + pageDOM.offsetHeight * 1;
+        }
+    </script>
+</head>
+<body>
+    <div class="pages" id="pages">
+        <div class="page">
+            <div>
+                <p>这已经不是晚点了</p>
+                <p>而是直接取消车次然后补开了</p>
+                <p>🤷</p>
+            </div>
+            <button onclick="btn1()">对吧</button>
+        </div>
+        <div class="page">
+            <div>
+                <p>恭喜你点了一下刚才的按钮</p>
+                <p>我特意让这页面翻不动，这是我写的功能</p>
+                <p>我特意加了个按钮给你翻页，这也是我写的功能</p>
+            </div>
+            <button onclick="btn1()">👍</button>
+        </div>
+        <div class="page">
+            <div>
+                <p>我能做<font style="color: hsl(0, 100%, 50%)">五</font><font style="color: hsl(30, 100%, 50%)">彩</font><font style="color: hsl(60, 100%, 50%)">斑</font><font style="color: hsl(90, 100%, 50%)">澜</font>的文字</p> 
+                <p style="text-shadow: 0 2px 4px hsl(0, 100%, 50%), 0 -4px 4px hsl(300, 100%, 50%);">还能做五彩斑斓的阴影</p>
+                <p style="animation: jump 0.3s linear 0s infinite alternate-reverse;">还能让它动起来</p>
+            </div>
+            <button onclick="btn1()" style="animation: circle 2.4s linear 0s infinite forwards;">点我呀</button>
+        </div>
+        <div class="page">
+            <div>
+                <p>上面那些只是简单做了一下</p>
+                <p>只是用来说明，我是做交互的</p>
+                <p>负责制作用户接触到的界面，包括功能逻辑、界面样式等等</p>
+            </div>
+            <button onclick="btn1()" class="specialBtn">写个好看点的按钮</button>
+        </div>
+        <div class="page">
+            <div>
+                <p>前端开发是计算机软件开发细分出来的一种</p>
+                <p>计算机体系非常大</p>
+                <p>从硅做成的半导体用来做逻辑门、触发器……</p>
+                <p>把它们连接起来构成电路，用光刻把电路蚀刻到硅上……</p>
+                <p>然后这块芯片能进行各种计算，但是人类不可能手工给它输入 0 1</p>
+                <p>于是有了存储器，把操作系统和软件都放进去让它运行</p>
+                <p>到互联网时代，软件服务普遍分前后台</p>
+                <p>后端负责管理用户数据，比如说登录验证、朋友圈动态存放和获取、新闻推送之类的</p>
+                <p><strong>前端负责做这么个给你操作的东西</strong></p>
+            </div>
+            <button onclick="btn1()">下一页</button>
+        </div>
+        <div class="page">
+            <div>
+                <p>想要更细分也是可以的，也会涉及到跨行业</p>
+                <p>比如说专门就有种职业叫 UI 设计 / UX / UED，whatever</p>
+                <p>专门画界面，但不实现功能</p>
+                <p>让程序员专心写逻辑，还原界面而无需设计界面</p>
+                <p>我比较全能</p>
+                <p>做界面设计<font style="opacity: 0.05; font-style: italic;">勉强算是非常非常非常好看</font></p>
+                <p>最后给你看看我几年前写的网页</p>
+                <a href="./index.html">点击进入！</a>
+                <p>至于近期写的东西，就没有办法现场演示了（还没忙过来）🤪</p>
+            </div>
+            <div>介绍完了，没有下一页了</div>
+        </div>
+    </div>
+</body>
+</html>
