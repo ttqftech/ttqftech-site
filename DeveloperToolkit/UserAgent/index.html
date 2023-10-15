@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<style>
+			body{
+				background-color: lightslategray;
+			}
+			.Title{
+				display:inline-block;
+				width:100%;
+				text-align:center;
+				border:dashed 2px #3A7;
+				font-family: "微软雅黑", "arial";
+			}
+			
+			#test1{
+				border: red 2px solid;
+				width: 256px;
+				height: 256px;
+				/*text-align: center;*/
+				position: relative;
+			}
+			#test2{
+				display: block;
+				margin: 0 auto;
+				border: green 2px solid;
+				width: 128px;
+				height: 128px;
+			}
+		</style>
+		<style>
+			a {
+				color: rgb(1, 124, 185);
+				text-decoration: none;
+			}
+			input:focus {
+				outline: none 0;
+			}
+			body{ 
+				color: #b5b5b5; 
+				font: 14px 'Arial';
+			}
+			body,
+			li:first-child:after,
+			li:last-child:after{
+				background-image: url(data:image/png;base64,...);/**/
+			}
+			.box{ 
+				position: relative; 
+				width: 384px; 
+				height: 140px; 
+				margin: 50px auto;
+			}
+			.box li{ 
+				list-style-type: none; 
+				margin-bottom: 10px; 
+				border-radius: 5px; 
+				overflow: hidden; 
+				position: relative; 
+				height: 42px;
+			}
+			.box li input{
+				box-shadow:inset 0 0 5px rgba(0,0,0,.5),-1px 1px 0 rgba(255,255,255,.05); 
+				border:0 none; 
+				padding:8px 5px 5px;  
+				border-radius: 5px; 
+				width:300px;  
+				height: 28px;
+				-webkit-box-sizing: content-box;
+				-moz-box-sizing: content-box;
+				-o-box-sizing: content-box;
+				-ms-box-sizing: content-box;
+				box-sizing: content-box;
+				background: rgba(0,0,0,.1); 
+				color: #fff;
+			} 
+			
+			.box li:first-child:after,
+			.box li:last-child:after{ 
+				position: absolute;
+				width: 50px; 
+				height: 50px; 
+				content: ""; 
+				border-radius: 25px;
+				z-index: 2; 
+				right: -23px;
+				box-shadow: 0 0 8px rgba(0,0,0,.5);
+			}
+			::-webkit-input-placeholder { 
+				color:#fff; 
+				font-weight: bold;
+			}
+			.box li:first-child:after{
+				top: 15px;
+			}
+			.box li:last-child:after{
+				bottom:15px;
+			}
+			.box label{ 
+				width: 70px; 
+				display: inline-block; 
+				text-align: right;
+			}
+			.box span{ 
+				display: block; 
+				color: #6296b4; 
+				padding-left: 75px;
+			}
+			.button{ 
+				position: absolute; 
+				top: 24px; 
+				right: -30px; 
+				width: 44px; 
+				height: 44px; 
+				border-radius: 22px; 
+				border:1px solid #00a1d2; 
+				background: -webkit-linear-gradient(top,#029ecd,#0d7796); 
+				color: #fff; 
+				text-shadow:1px 1px 0 #666; 
+				box-shadow:0 0 0 5px #2c2c2c; 
+				z-index: 3; 
+				text-align: center; 
+				line-height: 46px;
+				-webkit-transition: all 0.28s ease-in;
+				-moz--transition: all 0.28s ease-in;
+			}
+			.button:hover{ 
+				-webkit-transform:rotate(90deg); 
+			}
+			@font-face {
+			  font-family: 'FontAwesome';
+			  src: url('font/fontawesome-webfont.eot');
+			  src: url('font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), 
+						 url('font/fontawesome-webfont.woff') format('woff'), 
+						 url('font/fontawesome-webfont.ttf') format('truetype'), 
+						 url('font/fontawesome-webfont.svg#FontAwesome') format('svg');
+			  font-weight: normal;
+			  font-style: normal;
+			}
+			.icon-arrow-right:before {
+			  font-family: FontAwesome;
+			  font-weight: normal;
+			  font-size: 26px;
+			  font-style: normal;
+			  display: inline-block;
+			  text-decoration: inherit;
+			  content: "\f061";
+			}
+
+		</style>
+		<style>
+			.demo {
+			 width: 250px;
+			 margin: 80px auto 0;
+			}
+			.demo div {
+			 margin-bottom: 20px; 
+			}
+			.onload,
+			.search {
+			 position: relative;
+			 display: inline-block;
+			 line-height: 25px;
+			 padding: 10px 15px;
+			 border-radius: 5px;
+			 color: #fff;
+			 font-weight: bold;
+			 text-shadow:0 1px 2px rgba(0,0,0,.4);
+			}
+			.onload {
+			 width: 130px;
+			 font-size: 14px;
+			}
+			.search {
+			 width: 30px;
+			 margin-left: 20px;
+			}
+			.onload:after,
+			.search:after {
+			 display: inline-block;
+			 font-family: 'icomoon';
+			 font-style: normal;
+			 speak: none;
+			 font-weight: normal;
+			 -webkit-font-smoothing: antialiased;
+			 content: "\21";
+			 font-size: 20px;
+			 padding-left: 5px;
+			}
+			.onload:after {
+			 content: "\22";
+			 padding-left: 14px;
+			 margin-left: 14px;
+			}
+			.onload:before,
+			search:before {
+			 position: absolute;
+			 top: 0;
+			 right: 0;
+			 display: inline-block;
+			 content: "";
+			 width: 90px;
+			 height: 59px;
+			 background: -webkit-radial-gradient(right,rgba(255,255,255,.3),rgba(255,255,255,0) 70%);
+			 background: -moz-radial-gradient(right,rgba(255,255,255,.3),rgba(255,255,255,0) 70%);
+			 background: -ms-radial-gradient(right,rgba(255,255,255,.3),rgba(255,255,255,0) 70%);
+			 background: -o-radial-gradient(right,rgba(255,255,255,.3),rgba(255,255,255,0) 70%);
+			 background: radial-gradient(right,rgba(255,255,255,.3),rgba(255,255,255,0) 70%);
+			}
+			.onload:hover,
+			.search:hover {
+			 color: #fff;
+			 text-decoration: none;
+			}
+			.onload:active,
+			.search:active {
+			 top:8px;
+			 box-shadow: 0 1px 6px rgba(0,0,0,.2) inset;
+			}
+			.pink {
+			 border:1px solid #de73bd;
+			 box-shadow: 0 0 0 1px #883b73,1px 5px 0 #883b73,-1px 5px 0 #883b73,0 6px 8px rgba(0,0,0,.8);
+			 background: -webkit-linear-gradient(top,#d745a4,#bd368d);
+			 background: -moz-linear-gradient(top,#d745a4,#bd368d);
+			 background: -ms-linear-gradient(top,#d745a4,#bd368d);
+			 background: -o-linear-gradient(top,#d745a4,#bd368d);
+			 background: linear-gradient(top,#d745a4,#bd368d);
+			}
+			.onload.pink:after {
+			 box-shadow: -1px 0 0 #8f3879,-2px 0 0 #e691cd;
+			}
+			.pink:hover {
+			 background: -webkit-linear-gradient(top,#ea6abd,#bd368d);
+			 background: -moz-linear-gradient(top,#ea6abd,#bd368d);
+			 background: -ms-linear-gradient(top,#ea6abd,#bd368d);
+			 background: -o-linear-gradient(top,#ea6abd,#bd368d);
+			 background: linear-gradient(top,#ea6abd,#bd368d);
+			}
+			.pink:active {
+			 background: -webkit-linear-gradient(top,#bd368d,#bd368d);
+			 background: -moz-linear-gradient(top,#bd368d,#bd368d);
+			 background: -ms-linear-gradient(top,#bd368d,#bd368d);
+			 background: -o-linear-gradient(top,#bd368d,#bd368d);
+			 background: linear-gradient(top,#bd368d,#bd368d);
+			}
+			.purple {
+			 border:1px solid #b271e5;
+			 box-shadow: 0 0 0 1px #883b73,1px 5px 0 #883b73,-1px 5px 0 #883b73,0 6px 8px rgba(0,0,0,.8);
+			 background: -webkit-linear-gradient(top,#9246d7,#8339c2);
+			 background: -moz-linear-gradient(top,#9246d7,#8339c2);
+			 background: -ms-linear-gradient(top,#9246d7,#8339c2);
+			 background: -o-linear-gradient(top,#9246d7,#8339c2);
+			 background: linear-gradient(top,#9246d7,#8339c2);
+			}
+			.onload.purple:after {
+			 box-shadow: -1px 0 0 #5d297b,-2px 0 0 #c998e7;
+			}
+			.purple:hover {
+			 background: -webkit-linear-gradient(top,#a35de6,#7733be);
+			 background: -moz-linear-gradient(top,#a35de6,#7733be);
+			 background: -ms-linear-gradient(top,#a35de6,#7733be);
+			 background: -o-linear-gradient(top,#a35de6,#7733be);
+			 background: linear-gradient(top,#a35de6,#7733be);
+			}
+			.purple:active {
+			 background: -webkit-linear-gradient(top,#8339c2,#8339c2);
+			 background: -moz-linear-gradient(top,#8339c2,#8339c2);
+			 background: -ms-linear-gradient(top,#8339c2,#8339c2);
+			 background: -o-linear-gradient(top,#8339c2,#8339c2);
+			 background: linear-gradient(top,#8339c2,#8339c2);
+			}
+			.sky_blue {
+			 border:1px solid #7cccff;
+			 box-shadow: 0 0 0 1px #007ac7,1px 5px 0 #007ac7,-1px 5px 0 #007ac7,0 6px 8px rgba(0,0,0,.8);
+			 background: -webkit-linear-gradient(top,#4db5fe,#3c9be2);
+			 background: -moz-linear-gradient(top,#4db5fe,#3c9be2);
+			 background: -ms-linear-gradient(top,#4db5fe,#3c9be2);
+			 background: -o-linear-gradient(top,#4db5fe,#3c9be2);
+			 background: linear-gradient(top,#4db5fe,#3c9be2);
+			}
+			.onload.sky_blue:after {
+			 box-shadow: -1px 0 0 #2c6c7f,-2px 0 0 #99d5fa;
+			}
+			.sky_blue:hover {
+			 background: -webkit-linear-gradient(top,#76c6ff,#3c9ce4);
+			 background: -moz-linear-gradient(top,#76c6ff,#3c9ce4);
+			 background: -ms-linear-gradient(top,#76c6ff,#3c9ce4);
+			 background: -o-linear-gradient(top,#76c6ff,#3c9ce4);
+			 background: linear-gradient(top,#76c6ff,#3c9ce4);
+			}
+			.sky_blue:active {
+			 background: -webkit-linear-gradient(top,#3c9be2,#3c9be2);
+			 background: -moz-linear-gradient(top,#3c9be2,#3c9be2);
+			 background: -ms-linear-gradient(top,#3c9be2,#3c9be2);
+			 background: -o-linear-gradient(top,#3c9be2,#3c9be2);
+			 background: linear-gradient(top,#3c9be2,#3c9be2);
+			}
+			.green {
+			 border:1px solid #9bcf60;
+			 box-shadow: 0 0 0 1px #469a44,1px 5px 0 #469a44,-1px 5px 0 #469a44,0 6px 8px rgba(0,0,0,.8);
+			 background: -webkit-linear-gradient(top,#8dd845,#6fbb31);
+			 background: -moz-linear-gradient(top,#8dd845,#6fbb31);
+			 background: -ms-linear-gradient(top,#8dd845,#6fbb31);
+			 background: -o-linear-gradient(top,#8dd845,#6fbb31);
+			 background: linear-gradient(top,#8dd845,#6fbb31);
+			}
+			.onload.green:after {
+			 box-shadow: -1px 0 0 #597b2d,-2px 0 0 #c6e897;
+			}
+			.green:hover {
+			 background: -webkit-linear-gradient(top,#9de15d,#74bf37);
+			 background: -moz-linear-gradient(top,#9de15d,#74bf37);
+			 background: -ms-linear-gradient(top,#9de15d,#74bf37);
+			 background: -o-linear-gradient(top,#9de15d,#74bf37);
+			 background: linear-gradient(top,#9de15d,#74bf37);
+			}
+			.green:active {
+			 background: -webkit-linear-gradient(top,#6fbb31,#6fbb31);
+			 background: -moz-linear-gradient(top,#6fbb31,#6fbb31);
+			 background: -ms-linear-gradient(top,#6fbb31,#6fbb31);
+			 background: -o-linear-gradient(top,#6fbb31,#6fbb31);
+			 background: linear-gradient(top,#6fbb31,#6fbb31);
+			}
+			.yellow {
+			 border:1px solid #e0e571;
+			 box-shadow: 0 0 0 1px #87883b,1px 5px 0 #87883b,-1px 5px 0 #87883b,0 6px 8px rgba(0,0,0,.8);
+			 background: -webkit-linear-gradient(top,#d1d744,#bbbf39);
+			 background: -moz-linear-gradient(top,#d1d744,#bbbf39);
+			 background: -ms-linear-gradient(top,#d1d744,#bbbf39);
+			 background: -o-linear-gradient(top,#d1d744,#bbbf39);
+			 background: linear-gradient(top,#d1d744,#bbbf39);
+			}
+			.onload.yellow:after {
+			 box-shadow: -1px 0 0 #597b2d,-2px 0 0 #c6e897;
+			}
+			.yellow:hover {
+			 background: -webkit-linear-gradient(top,#dadd50,#c0c442);
+			 background: -moz-linear-gradient(top,#dadd50,#c0c442);
+			 background: -ms-linear-gradient(top,#dadd50,#c0c442);
+			 background: -o-linear-gradient(top,#dadd50,#c0c442);
+			 background: linear-gradient(top,#dadd50,#c0c442);
+			}
+			.yellow:active {
+			 background: -webkit-linear-gradient(top,#bbbf39,#bbbf39);
+			 background: -moz-linear-gradient(top,#bbbf39,#bbbf39);
+			 background: -ms-linear-gradient(top,#bbbf39,#bbbf39);
+			 background: -o-linear-gradient(top,#bbbf39,#bbbf39);
+			 background: linear-gradient(top,#bbbf39,#bbbf39);
+			}
+			.orange {
+			 border:1px solid #e5bf76;
+			 box-shadow: 0 0 0 1px #88683b,1px 5px 0 #88683b,-1px 5px 0 #88683b,0 6px 8px rgba(0,0,0,.8);
+			 background: -webkit-linear-gradient(top,#e0b956,#bb8231);
+			 background: -moz-linear-gradient(top,#e0b956,#bb8231);
+			 background: -ms-linear-gradient(top,#e0b956,#bb8231);
+			 background: -o-linear-gradient(top,#e0b956,#bb8231);
+			 background: linear-gradient(top,#e0b956,#bb8231);
+			}
+			.onload.orange:after {
+			 box-shadow: -1px 0 0 #7e6a33,-2px 0 0 #e8ce98;
+			}
+			.orange:hover {
+			 background: -webkit-linear-gradient(top,#e7c369,#c18838);
+			 background: -moz-linear-gradient(top,#e7c369,#c18838);
+			 background: -ms-linear-gradient(top,#e7c369,#c18838);
+			 background: -o-linear-gradient(top,#e7c369,#c18838);
+			 background: linear-gradient(top,#e7c369,#c18838);
+			}
+			.orange:active {
+			 background: -webkit-linear-gradient(top,#bb8231,#bb8231);
+			 background: -moz-linear-gradient(top,#bb8231,#bb8231);
+			 background: -ms-linear-gradient(top,#bb8231,#bb8231);
+			 background: -o-linear-gradient(top,#bb8231,#bb8231);
+			 background: linear-gradient(top,#bb8231,#bb8231);
+			}
+			.red {
+			 border:1px solid #e57171;
+			 box-shadow: 0 0 0 1px #883b3b,1px 5px 0 #883b3b,-1px 5px 0 #883b3b,0 6px 8px rgba(0,0,0,.8);
+			 background: -webkit-linear-gradient(top,#d74444,#c43a3a);
+			 background: -moz-linear-gradient(top,#d74444,#c43a3a);
+			 background: -ms-linear-gradient(top,#d74444,#c43a3a);
+			 background: -o-linear-gradient(top,#d74444,#c43a3a);
+			 background: linear-gradient(top,#d74444,#c43a3a);
+			}
+			.onload.red:after {
+			 box-shadow: -1px 0 0 #8b3737,-2px 0 0 #e69090;
+			}
+			.red:hover {
+			 background: -webkit-linear-gradient(top,#e25c5c,#cc4646);
+			 background: -moz-linear-gradient(top,#e25c5c,#cc4646);
+			 background: -ms-linear-gradient(top,#e25c5c,#cc4646);
+			 background: -o-linear-gradient(top,#e25c5c,#cc4646);
+			 background: linear-gradient(top,#e25c5c,#cc4646);
+			}
+			.orange:active {
+			 background: -webkit-linear-gradient(top,#c43a3a,#c43a3a);
+			 background: -moz-linear-gradient(top,#c43a3a,#c43a3a);
+			 background: -ms-linear-gradient(top,#c43a3a,#c43a3a);
+			 background: -o-linear-gradient(top,#c43a3a,#c43a3a);
+			 background: linear-gradient(top,#c43a3a,#c43a3a);
+			}
+			.gray {
+			 border:1px solid #d6d6d7;
+			 box-shadow: 0 0 0 1px #919191,1px 5px 0 #919191,-1px 5px 0 #919191,0 6px 8px rgba(0,0,0,.8);
+			 background: -webkit-linear-gradient(top,#bdbebf,#ababac);
+			 background: -moz-linear-gradient(top,#bdbebf,#ababac);
+			 background: -ms-linear-gradient(top,#bdbebf,#ababac);
+			 background: -o-linear-gradient(top,#bdbebf,#ababac);
+			 background: linear-gradient(top,#bdbebf,#ababac);
+			}
+			.onload.gray:after {
+			 box-shadow: -1px 0 0 #7b7a7a,-2px 0 0 #dbdbdc;
+			}
+			.gray:hover {
+			 background: -webkit-linear-gradient(top,#cbcccd,#9e9fa0);
+			 background: -moz-linear-gradient(top,#cbcccd,#9e9fa0);
+			 background: -ms-linear-gradient(top,#cbcccd,#9e9fa0);
+			 background: -o-linear-gradient(top,#cbcccd,#9e9fa0);
+			 background: linear-gradient(top,#cbcccd,#9e9fa0);
+			}
+			.gray:active {
+			 background: -webkit-linear-gradient(top,#ababac,#ababac);
+			 background: -moz-linear-gradient(top,#ababac,#ababac);
+			 background: -ms-linear-gradient(top,#ababac,#ababac);
+			 background: -o-linear-gradient(top,#ababac,#ababac);
+			 background: linear-gradient(top,#ababac,#ababac);
+			}
+			@font-face {
+			 font-family: 'icomoon';
+			 src:url('fonts/icomoon.eot');
+			 src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+			  url('fonts/icomoon.svg#icomoon') format('svg'),
+			  url('fonts/icomoon.woff') format('woff'),
+			  url('fonts/icomoon.ttf') format('truetype');
+			 font-weight: normal;
+			 font-style: normal;
+			}
+		</style>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function rand(min,max){
+				return Math.round(min+(Math.random()*(max-min)));
+			};
+			var fade = function(element, transparency, speed, callback){//透明度渐变：transparency:透明度 0(全透)-100(不透)；speed:速度1-100，默认为1
+				if(typeof(element)=='string')element=document.getElementById(element);
+				if(!element.effect){
+					element.effect = {};
+					element.effect.fade=0;
+				}
+				clearInterval(element.effect.fade);
+				var speed=speed||1;
+				var start=(function(elem){
+					var alpha;
+					if(navigator.userAgent.toLowerCase().indexOf('msie') != -1){	// 是 msie
+							alpha=elem.currentStyle.filter.indexOf("opacity=") >= 0?(parseFloat( elem.currentStyle.filter.match(/opacity=([^)]*)/)[1] )) + '':
+							'100';
+					}else{
+							alpha=100*elem.ownerDocument.defaultView.getComputedStyle(elem,null)['opacity'];
+					}
+					return alpha;
+				})(element);
+				if(window.console&&window.console.log)console.log('start: '+start+" end: "+transparency);
+				element.effect.fade = setInterval(function(){
+					start = start < transparency ? Math.min(start + speed, transparency) : Math.max(start - speed, transparency);
+					element.style.opacity =  start / 100;
+					element.style.filter = 'alpha(opacity=' + start + ')';
+					if(Math.round(start) == transparency){		// 到达终点
+						element.style.opacity =  transparency / 100;
+						element.style.filter = 'alpha(opacity=' + transparency + ')';
+						clearInterval(element.effect.fade);
+						if(callback)callback.call(element);
+					}
+				}, 20);
+			};
+			var move = function(element, position, speed, callback){//移动到指定位置，position:移动到指定left及top 格式{left:120, top:340}或{left:120}或{top:340}；speed:速度 1-100，默认为10
+				if(typeof(element)=='string')element=document.getElementById(element);
+				if(!element.effect){
+					element.effect = {};
+					element.effect.move=0;
+				}
+				clearInterval(element.effect.move);
+				var speed=speed||10;
+				var start=(function(elem){
+					var	posi = {left:elem.offsetLeft, top:elem.offsetTop};
+					while(elem = elem.offsetParent){
+						posi.left += elem.offsetLeft;
+						posi.top += elem.offsetTop;
+					};
+					return posi;
+				})(element);
+				element.style.position = 'absolute';
+				var	style = element.style;
+				var styleArr=[];
+				if(typeof(position.left)=='number')styleArr.push('left');
+				if(typeof(position.top)=='number')styleArr.push('top');
+				element.effect.move = setInterval(function(){
+					for(var i=0;i<styleArr.length;i++){
+						start[styleArr[i]] += (position[styleArr[i]] - start[styleArr[i]]) * speed/100;
+						style[styleArr[i]] = start[styleArr[i]] + 'px';
+					}
+					for(var i=0;i<styleArr.length;i++){
+						if(Math.round(start[styleArr[i]]) == position[styleArr[i]]){
+							if(i!=styleArr.length-1)continue;
+						}else{
+							break;
+						}
+						for(var i=0;i<styleArr.length;i++)style[styleArr[i]] = position[styleArr[i]] + 'px';
+						clearInterval(element.effect.move);
+						if(callback)callback.call(element);
+					}
+				}, 20);
+			};
+			var resize = function(element, size, speed, callback){//长宽渐变：size:要改变到的尺寸 格式 {width:400, height:250}或{width:400}或{height:250}；speed:速度 1-100，默认为10
+				if(typeof(element)=='string')element=document.getElementById(element);
+				if(!element.effect){
+					element.effect = {};
+					element.effect.resize=0;
+				}
+				clearInterval(element.effect.resize);
+				var speed=speed||10;
+				var	start = {width:element.offsetWidth, height:element.offsetHeight};
+				var styleArr=[];
+				if(!(navigator.userAgent.toLowerCase().indexOf('msie') != -1&&document.compatMode == 'BackCompat')){
+					//除了ie下border-content式盒模型情况外，需要对size加以修正
+					var CStyle=document.defaultView?document.defaultView.getComputedStyle(element,null):element.currentStyle;
+					if(typeof(size.width)=='number'){
+						styleArr.push('width');
+						size.width=size.width-CStyle.paddingLeft.replace(/\D/g,'')-CStyle.paddingRight.replace(/\D/g,'');
+					}
+					if(typeof(size.height)=='number'){
+						styleArr.push('height');
+						size.height=size.height-CStyle.paddingTop.replace(/\D/g,'')-CStyle.paddingBottom.replace(/\D/g,'');
+					}
+				}
+				element.style.overflow = 'hidden';
+				var	style = element.style;
+				element.effect.resize = setInterval(function(){
+					for(var i=0;i<styleArr.length;i++){
+						start[styleArr[i]] += (size[styleArr[i]] - start[styleArr[i]]) * speed/100;
+						style[styleArr[i]] = start[styleArr[i]] + 'px';
+					}
+					for(var i=0;i<styleArr.length;i++){
+						if(Math.round(start[styleArr[i]]) == size[styleArr[i]]){
+							if(i!=styleArr.length-1)continue;
+						}else{
+							break;
+						}
+						for(var i=0;i<styleArr.length;i++)style[styleArr[i]] = size[styleArr[i]] + 'px';
+						clearInterval(element.effect.resize);
+						if(callback)callback.call(element);
+					}
+				}, 20);
+			};
+		</script>
+	</head>
+	<body>
+		<h class="Title" id="mainTitle">你嘅浏览器嘅 User Agent 系</h>
+		<p id="AgentString" style="border:dashed 2px #35A"></p>
+		<p id="Output"></p>
+		<script>
+			var mainTitle=document.getElementById("mainTitle");
+			var ScreenWidth=mainTitle.offsetWidth;
+			mainTitle.style.fontSize=ScreenWidth/15+'px';
+			var o=document.getElementById("AgentString");
+			var outputText=document.getElementById("Output")
+			o.innerHTML=navigator.userAgent;
+			if (/Android|WebOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+				outputText.innerHTML="设备：手机端　页面宽度："+ScreenWidth;
+			}else{
+				outputText.innerHTML="设备：电脑端　页面宽度："+ScreenWidth;
+			}
+		</script>
+		
+		<div id="testDiv" style="position:absolute; right:100px; top:250px; background-color:#abc; width:100px; height:50px;padding:10px;" onclick="alert(this.style.filter)">
+			<div style="background-color:#369; height:100%;"></div>
+		</div>
+		<div>
+			<br/> 动画测试
+			<input type="button" value="改变大小" onClick="resize('testDiv', {width:rand(60,600),height:rand(30,300)})" />
+			<input type="button" value="改变宽度" onClick="resize('testDiv', {width:rand(60,600)})" />
+			<input type="button" value="改变高度" onClick="resize('testDiv', {height:rand(30,300)})" />
+		
+			<input type="button" value="移动位置" onClick="move('testDiv', {left:rand(40,600),top:rand(40,400)})" />
+			<input type="button" value="水平移动" onClick="move('testDiv', {left:rand(40,600)})" />
+			<input type="button" value="垂直移动" onClick="move('testDiv', {top:rand(40,400)})" />
+		
+			<input type="button" value="透明度变化" onClick="fade('testDiv', rand(5,100))" />
+		
+			<input type="button" value="还原" onClick="var ele=document.getElementById('testDiv');clearInterval(ele.effect.move);clearInterval(ele.effect.fade);clearInterval(ele.effect.resize);ele.style.cssText='position:absolute; right:100px; top:50px; background-color:#abc; width:100px; height:50px;padding:10px;'" />
+			
+			<div id="test1">
+				<div id="test2"></div>
+			</div>			
+		</div>
+		<img src="envelope.png" style="width: 64px; height: 64px; padding: 16px;"></img>
+		
+		<div class="box">
+		  <form action="#" method="get">
+		    <ul>
+		      <li>
+		        <label for="username">Email:</label><input type="text" id="username"  class="username" placeholder="john.smith@strategysoft.com"/>
+		      </li>
+		      <li>
+		        <label for="password">Password:</label><input type="password" id="password" class="password" placeholder="******"/>
+		      </li>
+		     </ul>
+		     <a href="javascript:;" class="button"/><i class="icon-arrow-right"></i></a>
+		  </form>
+		</div>
+
+		<form action="">
+		　<div class="clearfix">
+		　　<a href="#" class="onload pink">DOWNLOAD</a>
+		　　<a href="#" class="search pink"></a>
+		　</div>
+		　<div class="clearfix">
+		　　<a href="#" class="onload purple">DOWNLOAD</a>
+		　　<a href="#" class="search purple"></a>
+		　</div>
+		　<div class="clearfix">
+		　　<a href="#" class="onload sky_blue">DOWNLOAD</a>
+		　　<a href="#" class="search sky_blue"></a>
+		　</div>
+		　<div class="clearfix">
+		　　<a href="#" class="onload green">DOWNLOAD</a>
+		　　<a href="#" class="search green"></a>
+		　</div>
+		　<div class="clearfix">
+		　　<a href="#" class="onload yellow">DOWNLOAD</a>
+		　　<a href="#" class="search yellow"></a>
+		　</div>
+		　<div class="clearfix">
+		　　<a href="#" class="onload orange">DOWNLOAD</a>
+		　　<a href="#" class="search orange"></a>
+		　</div>
+		　<div class="clearfix">
+		　　<a href="#" class="onload red">DOWNLOAD</a>
+		　　<a href="#" class="search red"></a>
+		　</div>
+		　<div class="clearfix">
+		　　<a href="#" class="onload gray">DOWNLOAD</a>
+		　　<a href="#" class="search gray"></a>
+		　</div>
+		</form>	
+
+	</body>
+</html>

@@ -1,0 +1,168 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+/*body{
+	text-align: center;
+}*/
+
+#topbar{
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 48px;
+	background-color: black;
+	box-shadow: 0px 2px 4px black;
+	opacity: 0.8;
+    z-index: 100;
+    font-size: 0px;				/* 去除 inline-block 元素间的间隙问题*/
+	text-align: center;
+}
+#topbar2-wrap{
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 48px;
+	z-index: 101;
+	font-size: 0px;				/* 去除 inline-block 元素间的间隙问题*/
+	text-align: center;	
+}
+#topbar2{
+	position: absolute;
+	width: 0%;
+	height: 100%;
+	left: 44px;
+	background-color: royalblue;
+	box-shadow: 0px 2px 4px royalblue;
+	overflow: hidden;
+}
+#webPos{
+	position: absolute;
+	left: 24px;
+	width: 40%;
+	height: 48px;
+	line-height: 48px;
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	text-decoration: none;
+	/*border: red 1px solid;*/
+}
+#TOttqftech{
+	position: absolute;
+	right: 24px;
+	width: 40%;
+	height: 48px;
+	line-height: 48px;
+	color: white;
+	font-size: 20px;
+	text-align: right;
+	/*border: red 1px solid;*/
+}
+#webPos a, #TOttqftech a{
+	text-decoration: none;
+	color: white;
+}
+
+#menubtn{
+	position: absolute;
+	left: 28px;
+	top: 8px;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+
+#countDown-label{
+	position: absolute;
+	top: 16px;
+	left: 0;
+	right: 0;
+	width: 14em;
+	margin: 0 auto;
+	font-size: 18px;
+	height: 18px;
+	color: yellow;
+	/*border: red 1px solid;*/
+}
+#countDown-main{
+	position: absolute;
+	top: -2px;
+	left: 0;
+	right: 0;
+	width: 9em;
+	margin: 0 auto;
+	font-size: 36px;
+	height: 36px;
+	color: white;
+	/*border: red 1px solid;*/
+}
+#countDown-line{
+	position: absolute;
+	top: 42px;
+	left: 0;
+	right: 0;
+	height: 2px;
+	width: 170px;
+	margin: 0 auto;
+	background-color: red;
+}
+
+#content-wrapper{
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+}
+
+#bottombar{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 48px;
+	background-color: rgba(245,245,245,0.95);
+	border-top: royalblue 2px solid;
+	box-shadow: 0 0 6px rgba(127,127,127,0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 10;
+}
+#bottombar>nav{
+	width: 100%;
+}
+#bottombar>nav>ul{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+#bottombar li{
+	list-style-type: none;
+}
+#bottombar li>a{
+	width: 160px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: width 0.4s, box-shadow 0.4s;
+	-webkit-transition: width 0.4s, box-shadow 0.2s, color 0.2s, background-color 0.2s;
+	text-decoration: none;
+	color: black;
+}
+#bottombar li>a:hover{
+	width: 220px;
+	box-shadow: 0px 2px 2px rgba(127,127,127,0.5);
+	color: royalblue;
+	background-color: white;
+}
+#bottombar li>a>img{
+	width: 32px;
+	height: 32px;
+	margin: 5px 16px 3px 0px;
+}
+#bottombar li>a>span{
+	display: block;
+	font-size: 18px;
+	line-height: 18px;
+	height: 18px;
+}

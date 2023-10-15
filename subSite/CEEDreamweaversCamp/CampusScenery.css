@@ -1,0 +1,80 @@
+body{
+	background-image: url("SouthGate.jpg");
+	background-size: cover;
+	background-position: center bottom;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+#blackBackground{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+}
+
+#gallary{
+	position: absolute;
+	top: 48px;
+	bottom: 48px;
+	left: -16px;
+	right: -16px;
+	padding: 48px 64px 48px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	overflow-y: scroll;
+}
+.campusScenery{
+	height: 160px;
+	width: auto;
+	margin: 24px;
+	border-radius: 1px;
+	/*border: lightgray 1.5px solid;*/
+	/*box-shadow: 2px 4px 10px rgba(36,36,36,0.5);
+	border-top: rgba(255,255,255,0.7) 1px solid;
+	border-left: rgba(240,240,240,0.65) 1px solid;*/
+	box-shadow: -2px 4px 2px rgba(32,32,32,0.7);
+	padding: 8px;
+	background-color: white;
+	cursor: pointer;
+}
+#picZoomDiv-mask{
+	position: fixed;
+	display: none;
+	top: 48px;
+	bottom: 48px;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+}
+#picZoomDiv{
+	position: fixed;
+	display: none;
+	top: 20%;
+	right: 20%;
+	bottom: 20%;
+	left: 20%;
+	border-radius: 1px;
+	/*border: lightgray 1.5px solid;*/
+	/*box-shadow: 2px 4px 10px rgba(36,36,36,0.5);
+	border-top: rgba(255,255,255,0.7) 1px solid;
+	border-left: rgba(240,240,240,0.65) 1px solid;*/
+	box-shadow: -2px 4px 2px rgba(32,32,32,0.7);
+	padding: 8px;
+	background-color: white;
+	opacity: 0;
+}
+#picZoom{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background-color: #111111;
+	background-image: none;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}

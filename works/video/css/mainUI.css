@@ -1,0 +1,132 @@
+@font-face{
+	font-family: ttqftechiconfont;
+	src: url("http://backupserver.tencent.ttqf.tech/fonts/锐字工房荣光黑简1.0.ttf")  
+}
+
+
+#topbar{
+	display: block;
+	position: fixed;
+	width: 100%;
+	/*height: 48px;*/
+	height: 120px;
+	background: linear-gradient(0deg,rgba(0,0,0,0),rgba(0,0,0,0.8));
+    z-index: 100;
+    font-size: 0px;				/* 去除 inline-block 元素间的间隙问题*/
+	text-align: center;
+}
+#siteicon{
+	display: block;
+	position: absolute;
+	top: 16px;
+	height: 64px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+#siteicon-text{
+	display: block;
+	position: absolute;
+	top: 88px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	font-size: 16px;
+	color: white;
+	font-family: ttqftechiconfont;
+	text-shadow: 1px 1px 0px #48bcd0;
+}
+#topbar-site{
+	display: block;
+	position: absolute;
+	left: 42%;
+	width: 16%;
+	top: 0;
+	height: 120px;
+	opacity: 0.95;
+	transition: transform 0.2s ease, background 0.2s ease;
+}
+.topbar-nav{
+	display: block;
+	position: absolute;
+	top: 26px;
+	height: 86px;
+	width: 10%;
+	opacity: 0.95;
+	color: white;
+	/*border: red 1px solid;*/	
+	text-decoration: none;
+	transition: transform 0.2s ease, background 0.2s ease;
+}
+.topbar-nav:hover, #topbar-site:hover{
+	transform: translateY(4px);
+	background: rgba(0,0,0,0.2);
+}
+.topbar-nav:active, #topbar-site:active{
+	transform: translateY(4px) scale(1.05);
+	background: rgba(150,175,250,0.8);
+}
+.topbar-icon{
+	display: block;
+	position: absolute;
+	top: 16px;
+	height: 32px;
+	width: auto;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.topbar-icon-text{
+	display: block;
+	position: absolute;
+	top: 62px;
+	height: 14px;
+	font-size: 14px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	text-shadow: 0px 1px 0px #444444;
+}
+#topbar-nav1{
+	left: 12%;
+}
+#topbar-nav2{
+	left: 22%;
+}
+#topbar-nav3{
+	left: 32%;
+}
+#topbar-nav4{
+	left: 58%;
+}
+#topbar-nav5{
+	left: 68%;
+}
+#topbar-nav6{
+	left: 78%;
+}
+.topbar-navline{
+	position: absolute;
+	top: 28px;
+	height: 86px;
+	width: 1px;
+	background: linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,1),rgba(255,255,255,0));
+}
+#topbar-navline1{
+	left: calc(22% - 0.5px);
+}
+#topbar-navline2{
+	left: calc(32% - 0.5px);
+}
+#topbar-navline3{
+	left: calc(42% - 0.5px);
+}
+#topbar-navline4{
+	left: calc(58% - 0.5px);
+}
+#topbar-navline5{
+	left: calc(68% - 0.5px);
+}
+#topbar-navline6{
+	left: calc(78% - 0.5px);
+}

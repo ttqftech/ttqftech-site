@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta charset="utf-8" />
+		<meta name="author" content="滔滔清风"/>
+		<meta name="keywords" content="滔滔清风, PAC2017, 作品, 记忆永存, 创意空间, 肇庆一中, 视频"/>
+		<meta name="viewport" content="width=800">
+		<title>肇庆一中·记忆永存 - 视听工作室 - 滔滔清风科技馆</title>
+		<link href="../videoDetail.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/mainUI_smallpage.css" rel="stylesheet" type="text/css" />
+		<!--[if lt IE 9]
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> 
+		[endif]-->
+	</head>
+	<body>
+		<div id="content-wrapper">
+			<nav id="topbar">
+				<a href="http://dreamweaver.ttqf.tech/TheEternalMemory.html" id="topbar-nav1" class="topbar-nav">
+					<img src="../../img/记忆永存图标-加阴影.png" class="topbar-icon" />
+					<span class="topbar-icon-text">记忆永存</span>		
+				</a>
+				<a href="http://works.ttqf.tech/" id="topbar-nav2" class="topbar-nav">
+					<img src="../../img/作品陈列架图标-加阴影.png" id="topbar-icon2" class="topbar-icon" />
+					<span class="topbar-icon-text">作品陈列架</span>					
+				</a>
+				<a href="http://dreamweaver.ttqf.tech/" id="topbar-nav3" class="topbar-nav">
+					<img src="../../img/高考筑梦营图标-加阴影.png" class="topbar-icon" />
+					<span class="topbar-icon-text">高考筑梦营</span>
+				</a>
+				<a href="http://works.ttqf.tech/video/" id="topbar-nav4" class="topbar-nav">
+					<img src="../../img/视听工作室图标-加阴影.png"class="topbar-icon" />
+					<span class="topbar-icon-text">视听工作室</span>
+				</a>
+				<a href="http://works.ttqf.tech/photograph/" id="topbar-nav5" class="topbar-nav">
+					<img src="../../img/光影艺术厅图标-加阴影.png" class="topbar-icon" />
+					<span class="topbar-icon-text">光影艺术厅</span>
+				</a>
+				<a href="http://works.ttqf.tech/software/" id="topbar-nav6" class="topbar-nav">
+					<img src="../../img/实用工具图标-加阴影.png" class="topbar-icon" />
+					<span class="topbar-icon-text">实用工具</span>
+				</a>
+				
+				<a href="http://ttqf.tech/" id="topbar-site">
+					<img id="siteicon" src="../../img/ttqftech.svg" />
+					<span id="siteicon-text">滔滔清风科技馆</span>
+				</a>
+
+				<div class="topbar-navline" id="topbar-navline1"></div>
+				<div class="topbar-navline" id="topbar-navline2"></div>
+				<div class="topbar-navline" id="topbar-navline3"></div>
+				<div class="topbar-navline" id="topbar-navline4"></div>
+				<div class="topbar-navline" id="topbar-navline5"></div>
+				<div class="topbar-navline" id="topbar-navline6"></div>
+			</nav>
+			
+			<!-- 此处可以应用 CSS 的 object-fit 来实现图片自适应功能，但 Edge 支持较迟，故不使用。 -->
+			<!--<img src="" id="main-bgpic"></img>-->
+			<div id="article-wrapper">
+				<h1 class="title">肇庆一中·记忆永存</h1>
+				<div class="vline"></div>
+				<div id="quality-selection" onclick="toggleQuality()">
+					<img src="../img/arrow_down_1157524_easyicon.net.png" />
+					<span>画质选择</span>
+				</div>
+				<ul id="quality-selectbox">
+					<li class="quality-selector" id="60pFHD超清H＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>60pFHD超清H+</span>						
+					</li>
+					<li class="quality-selector" id="60pFHD超清V＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>60pFHD超清V+</span>						
+					</li>
+					<li class="quality-selector" id="60pFHD超清">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>60pFHD超清</span>						
+					</li>
+					<li class="quality-selector" id="60pFHD高清H＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>60pFHD高清H+</span>						
+					</li>
+					<li class="quality-selector" id="60pFHD高清V＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>60pFHD高清V+</span>						
+					</li>
+					<li class="quality-selector" id="60pFHD高清">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>60pFHD高清</span>						
+					</li>
+					<li class="quality-selector" id="FHD超清H＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>FHD超清H+</span>						
+					</li>
+					<li class="quality-selector" id="FHD超清V＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>FHD超清V+</span>						
+					</li>
+					<li class="quality-selector" id="FHD超清">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>FHD超清</span>						
+					</li>
+					<li class="quality-selector" id="FHD高清H＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>FHD高清H+</span>						
+					</li>
+					<li class="quality-selector" id="FHD高清V＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>FHD高清V+</span>						
+					</li>
+					<li class="quality-selector" id="FHD高清">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>FHD高清</span>						
+					</li>
+					<li class="quality-selector" id="HD普清H＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>HD普清H+</span>						
+					</li>
+					<li class="quality-selector" id="HD普清V＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>HD普清V+</span>						
+					</li>
+					<li class="quality-selector" id="HD普清">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>HD普清</span>						
+					</li>
+					<li class="quality-selector" id="SD普清H＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>SD普清H+</span>						
+					</li>
+					<li class="quality-selector" id="SD普清V＋">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>SD普清V+</span>						
+					</li>
+					<li class="quality-selector" id="SD普清">
+						<img src="../img/arrow_down_1157524_easyicon.net.png" />
+						<span>SD普清</span>						
+					</li>
+				</ul>
+				<video id="video" src="SD普清.mp4" controls="controls"></video>
+				<h3>视频介绍</h3>
+				<div class="vline2"></div>
+				<p id="description"></p>
+				<div id="platform-container">
+					<a id="tencentVideo" class="platform-selector" href="https://v.qq.com/x/page/a0698il1bfa.html" target="_blank">
+						<img src="../img/tencentVideo.png" />
+						<span>到腾讯观看</span>
+					</a>
+					<a id="iqiyi" class="platform-selector" href="http://www.iqiyi.com/w_19ryp29s5l.html" target="_blank">
+						<img src="../img/iqiyi.png" />
+						<span>到爱奇艺观看</span>
+					</a>
+					<a id="youku" class="platform-selector" href="https://v.youku.com/v_show/id_XMzY4MTA2NjA4OA==.html" target="_blank">
+						<img src="../img/youku.png" />
+						<span>到优酷观看</span>
+					</a>
+					<a id="youtube" class="platform-selector" href="https://youtu.be/IV8x1nLenG8" target="_blank">
+						<img src="../img/youtube.png" />
+						<span>到油管观看</span>
+					</a>
+					<a id="bilibili" class="platform-selector" href="https://www.bilibili.com/video/av25401787/" target="_blank">
+						<img src="../img/bilibili_pink.png" />
+						<span>到 bilibili 观看</span>
+					</a>					
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="../../js/prefixfree.min.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mainUI_smallpage.js"></script>
+		<script src="../videoDetail.js"></script>
+
+	</body>
+</html>

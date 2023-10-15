@@ -1,0 +1,212 @@
+body{
+	background-image: url("AboutAuthorBackgound.jpg");
+	background-size: cover;
+	background-position: center bottom;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+#noticebar{
+	display: none;
+	opacity: 0;
+	position: fixed;
+	transform: translateY(-100%);
+	top: 56px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 36px;
+	line-height: 36px;
+	font-size: 18px;
+	width: 60%;
+	background-color: royalblue;
+	border-radius: 4px;
+	box-shadow: 0 3px 8px rgba(48,48,48,0.5);
+	text-align: center;
+	color: white;
+	z-index: 22;
+	overflow: hidden;
+}
+#noticebar-info{
+	animation: goNotice 7s ease-in-out infinite;
+}
+@keyframes goNotice{
+	0%  {transform: translateY(0);}
+	40% {transform: translateY(0);}
+	50% {transform: translateY(-50%);}
+	90% {transform: translateY(-50%);}
+	100%{transform: translateY(0%);}
+}
+
+#blackBackground{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.4;
+	animation: blackBackgroundd 2.5s ease-in-out;
+}
+#headIcon{
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translateX(-50%) rotate(00deg);
+	height: 35%;
+	width: auto;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0 0 32px 16px rgba(255,255,255,0.4);
+	border-radius: 50%;
+	animation: headIconn 2.5s ease-in-out;
+}
+#name{
+	position: absolute;
+	top: calc(58% - 4px);
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 45px;				/* 字体大小为高度一半 */
+	height: 90px;
+	line-height: 90px;
+	width: calc(90px * 4.5173);		/* width = height * 4.5173 */
+	text-align: center;
+	color: white;
+	background-image: url("AuthorInfoContainer.png");
+	background-size: contain;
+	animation: namee 2.5s ease-in-out;
+}
+#motto{
+	position: absolute;
+	top: 72%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 18px;
+	height: 60px;
+	line-height: 60px;
+	width: calc(60px * 4.5173);
+	text-align: center;
+	color: white;
+	background-image: url("AuthorInfoContainer.png");
+	background-size: contain;
+	animation: mottoo 2.5s ease-in-out;
+	cursor: pointer;
+}
+#song{					/* 初始值与 motto 一样 */
+	position: absolute;
+	top: 72%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 60px;
+	line-height: 60px;
+	width: 271.038px;
+	display: none;
+	opacity: 0;
+	animation: songg 0.6s paused forwards;
+}
+#info1{
+	position: absolute;
+	top: 20%;
+	left: 22%;
+	transform: translateX(-50%);
+	font-size: 30px;
+	height: 70px;
+	line-height: 70px;
+	width: calc(70px * 4.5173);		/* width = height * 4.5173 */
+	text-align: center;
+	color: white;
+	background-image: url("AuthorInfoContainer.png");
+	background-size: contain;
+	animation: info1a 2.5s ease-in-out;
+}	
+#info2{
+	position: absolute;
+	top: 40%;
+	left: 18%;
+	transform: translateX(-50%);
+	font-size: 30px;
+	height: 70px;
+	line-height: 70px;
+	width: calc(70px * 4.5173);		/* width = height * 4.5173 */
+	text-align: center;
+	color: white;
+	background-image: url("AuthorInfoContainer.png");
+	background-size: contain;
+	animation: info2a 2.5s ease-in-out;
+}	
+#info3{
+	position: absolute;
+	top: 20%;
+	right: 22%;
+	transform: translateX(50%);
+	font-size: 30px;
+	height: 70px;
+	line-height: 70px;
+	width: calc(70px * 4.5173);		/* width = height * 4.5173 */
+	text-align: center;
+	color: white;
+	background-image: url("AuthorInfoContainer.png");
+	background-size: contain;
+	animation: info3a 2.5s ease-in-out;
+}
+#info4{
+	position: absolute;
+	top: 40%;
+	right: 18%;
+	transform: translateX(50%);
+	font-size: 30px;				/* 字体大小为高度一半 */
+	height: 70px;
+	line-height: 70px;
+	width: calc(70px * 4.5173);		/* width = height * 4.5173 */
+	text-align: center;
+	color: white;
+	background-image: url("AuthorInfoContainer.png");
+	background-size: contain;
+	animation: info4a 2.5s ease-in-out;
+}
+
+@keyframes blackBackgroundd{
+	0%  {opacity: 0;}
+	40% {opacity: 0.4;}
+	100%{opacity: 0.4;}
+}
+@keyframes headIconn{
+	0%  {transform: translateX(-50%) scale(0) rotate(-60deg)}
+	40% {transform: translateX(-50%) scale(1) rotate(0deg)}
+	100%{transform: translateX(-50%) scale(1) rotate(0deg)}
+}
+@keyframes namee{
+	0%  {transform: translateX(-50%) translateY(-100%); opacity: 0;}
+	20% {transform: translateX(-50%) translateY(-100%); opacity: 0;}
+	60% {transform: translateX(-50%) translateY(0); opacity: 1;}
+	100%{transform: translateX(-50%) translateY(0); opacity: 1;}
+}
+@keyframes mottoo{
+	0%  {transform: translateX(-50%) scaleX(0.25); opacity: 0;}
+	50% {transform: translateX(-50%) scaleX(0.25); opacity: 0;}
+	95% {transform: translateX(-50%) scaleX(1); opacity: 1;}
+	100%{transform: translateX(-50%) scaleX(1); opacity: 1;}
+}
+@keyframes info1a{
+	0%  {transform: translateX(-150%); opacity: 0;}
+	55% {transform: translateX(-150%); opacity: 0;}
+	75% {transform: translateX(-50%);  opacity: 1;}
+	100%{transform: translateX(-50%);  opacity: 1;}
+}
+@keyframes info2a{
+	0%  {transform: translateX(-150%);  opacity: 0;}
+	60% {transform: translateX(-150%);  opacity: 0;}
+	80% {transform: translateX(-50%); opacity: 1;}
+	100%{transform: translateX(-50%); opacity: 1;}
+}
+@keyframes info3a{
+	0%  {transform: translateX(150%); opacity: 0;}
+	75% {transform: translateX(150%); opacity: 0;}
+	95% {transform: translateX(50%) ; opacity: 1;}
+	100%{transform: translateX(50%) ; opacity: 1;}
+}
+@keyframes info4a{
+	0%  {transform: translateX(150%); opacity: 0;}
+	80% {transform: translateX(150%); opacity: 0;}
+	100%{transform: translateX(50%) ; opacity: 1;}
+}
+@keyframes songg{
+	from{width: 271.038px; transform: translateX(-50%) translateY(0); opacity: 0;}
+	to{width: 542.076px; transform: translateX(-50%) translateY(100%); opacity: 1;}
+}

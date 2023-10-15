@@ -1,0 +1,208 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+body{
+	background-color: #213;
+	color: white;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+#content-wrapper{
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+.beforecontent{
+	display: inline-block;
+	height: 32px;
+	width: 100%;
+}
+
+p::-webkit-scrollbar{
+	width: 8px;
+}
+p::-webkit-scrollbar-track{
+	width: 8px;
+	border-radius: 8px;
+	background: rgba(63,63,63,0.3);
+}
+p::-webkit-scrollbar-thumb{
+	border-radius: 8px;
+	background: rgba(127,127,127,0.6);
+}
+
+#article-wrapper{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 64px;
+	margin: 0 auto;
+	width: calc(50% + 360px);
+	color: white;
+	/*border: greenyellow 1px solid;*/
+}
+.title{
+	position: absolute;
+	left: 16px;
+	top: 8px;
+	line-height: 44px;
+	font-size: 30px;
+	font-weight: normal;
+}
+.vline{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 72px;
+	height: 2px;
+	background-color: #557cf2;
+}
+#quality-selection{
+	position: absolute;
+	right: 0;
+	width: 160px;
+	top: 30px;
+	height: 40px;
+	box-shadow: 0 -0.1px 0.8px 0.1px rgba(255,255,255,0.7), 0px 2px 2px -0.2px rgba(0,0,0,0.4);
+	/*box-shadow: 0 -0.8px 0.2px -0.2px rgba(255,255,255,0.5), 0 1.2px 0.4px -0.2px rgba(0,0,0,0.3), 0px 2.5px 2.3px -0.5px rgba(0,0,0,0.3)*/
+	cursor: pointer;
+	color: #aaa;
+}
+#quality-selection:hover{
+	background-color: #557cf2;
+}
+#quality-selection:active{
+	background-color: #96affa;
+}
+#quality-selection img, .quality-selector img, #tencentVideo img, #iqiyi img, #youku img, #youtube img, #bilibili img{
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 10px;
+	height: 20px;
+	width: 20px;
+}
+#quality-selection span, .quality-selector span, #tencentVideo span, #iqiyi span, #youku span, #youtube span, #bilibili span{
+	display: block;
+	position: absolute;
+	left: 40px;
+	right: 15px;
+	top: 10px;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+}
+#quality-selectbox{
+	display: block;
+	position: absolute;
+	top: 74px;
+	right: 0;
+	width: 160px;
+	box-shadow: -1px 3px 4px rgba(16,16,16,0.5);
+	z-index: 1;
+	background: rgba(16,16,16,0.5);
+}
+.quality-selector{
+	position: relative;
+	display: none;
+	width: 160px;
+	height: 40px;
+	cursor: pointer;
+}
+.quality-selector:hover{
+	background: rgba(192,192,192,0.2);
+}
+.quality-selector:active{
+	background: rgba(192,192,192,0.4);
+}
+video{
+	position: absolute;
+	/*display: block;*/
+	left: 0;
+	width: 100%;
+	top: 74px;
+	height: calc(100% - 202px);		/* 底部边距 120px */
+	/*bottom: 80px;*/
+	background-color: #050200;
+}
+h3{
+	position: absolute;
+	top: calc(100% - 118px);
+	left: 2%;
+	width: 104px;
+	font-size: 26px;
+	text-align: left;
+}
+.vline2{
+	position: absolute;
+	left: 0;
+	min-width: 120px;
+	right: 740px;
+	top: calc(100% - 78px);
+	height: 2px;
+	background-color: #557cf2;
+}
+#description{
+	position: absolute;
+	top: calc(100% - 76px);
+	left: 2%;
+	right: 2%;
+	font-size: 16px;
+	height: 50px;
+	line-height: 25px;
+	text-align: left;
+	overflow: auto;
+}
+#platform-container{
+	position: absolute;
+	top: calc(100% - 120px);
+	max-width: calc(100% - 120px);
+	right: 0;
+	height: 42px;
+	text-align: right;
+	overflow: hidden;
+}
+.platform-selector{
+	position: relative;
+	display: none;
+	width: 160px;
+	margin-left: 20px;
+	height: 40px;
+	border-radius: 12px;
+}
+#tencentVideo{
+	border: 1px #fe9b03 solid;
+}
+#tencentVideo:hover{
+	background: #fe9b03;
+}
+#iqiyi{
+	border: 1px #78a524 solid;
+}
+#iqiyi:hover{
+	background: #78a524;
+}
+#youku{
+	border: 1px #00a8e0 solid;
+}
+#youku:hover{
+	background: #00a8e0;
+}
+#youtube{
+	border: 1px #fe0000 solid;
+}
+#youtube:hover{
+	background: #fe0000;
+}
+#bilibili{
+	border: 1px #fb7299 solid;
+}
+#bilibili:hover{
+	background: #fb7299;
+}

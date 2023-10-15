@@ -1,0 +1,108 @@
+body{
+	background-image: url("g3_10_100day.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+
+#blackBackground{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+	animation: blackBackgroundd 3s ease-in-out forwards;
+}
+#headFront{
+	display: block;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 44%;
+	color: white;
+	font-size: 60px;
+	animation: headFrontt 3s ease-in-out forwards;
+}
+#headBack{
+	display: block;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 44%;
+	color: transparent;
+	text-shadow: 0 0 4px blueviolet, 0 0 4px blueviolet, 0 0 11px #fefcd7, 8px -6px 20px #feec85, -18px -10px 32px #ffae34, 20px -28px 40px #ec760c, -18px -42px 64px #cd601c, 2px 8px 54px white;
+	font-size: 60px;
+	animation: headBackk 3s ease-in-out forwards;
+}
+#article{
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70%;
+	top: 25%;
+	bottom: 15%;
+	border: lightgray 1.5px solid;
+	background-color: rgba(255,255,255,0.9);
+	box-shadow: white 0 0 0 12px,
+				lightgray 0 0 0 14px,
+				rgba(15,15,15,0.3) 4px 8px 24px 14px;
+	text-align: center;
+	opacity: 0;
+	animation: articlee 3s ease-in-out forwards;
+}
+#bottombar{
+	animation: bottombarr 3s ease-in-out forwards;
+}
+
+@keyframes blackBackgroundd{
+	0%  {opacity: 1;}
+	55% {opacity: 1;}
+	100%{opacity: 0.5;}
+}
+@keyframes headBackk{
+	0%  {opacity: 0;}
+	15% {opacity: 0;}
+	35% {opacity: 1;}
+	50% {opacity: 1; top: 44%; text-shadow: 0 0 4px blueviolet, 0 0 4px blueviolet, 0 0 11px #fefcd7, 8px -6px 20px #feec85, -18px -10px 32px #ffae34, 20px -28px 40px #ec760c, -18px -42px 64px #cd601c, 2px 8px 54px white;}
+	100%{top: 10%; text-shadow: 0 0 6px blueviolet, 0 0 6px blueviolet, 0 0 12px #feae34;}
+}
+@keyframes headFrontt{
+	0%  {opacity: 0;}
+	20% {opacity: 1;}
+	50% {top: 44%}
+	100%{opacity: 1; top: 10%}
+}
+@keyframes articlee{
+	0%  {opacity: 0;}
+	50% {opacity: 0; transform: translateX(-50%) scale(0.5);}
+	100%{opacity: 1; transform: translateX(-50%) scale(1);}
+}
+@keyframes bottombarr{
+	0%  {opacity: 0;}
+	50% {opacity: 0; bottom: -48px;}
+	100%{opacity: 1; bottom: 0;}
+}
+
+video{
+	width: 100%;
+	height: 100%;
+	z-index: 21;
+}
+#video-fail{
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: dodgerblue;
+}
+#video-fail p{
+	position: absolute;
+	top: 32px;
+	width: 100%;
+	color: white;
+	font-size: 32px;
+	line-height: 48px;
+	font-weight: lighter;
+}

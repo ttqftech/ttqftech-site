@@ -1,0 +1,114 @@
+body{
+	background-image: url("2018CEEwin.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+
+#blackBackground{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+}
+#envelope-bottom{
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	height: 65%;
+	width: auto;
+	transform: translateX(-50%);
+}
+#envelope-top{
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	height: 65%;
+	width: auto;
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+#envelope-top-note{
+	position: absolute;
+	bottom: 18%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 18px;
+	color: black;
+	text-align: center;
+}
+#letter{
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	height: 50%;
+	width: auto;	/* 在 js 中计算 */
+	transform: translateX(-50%);
+	background-color: black;
+	border: red 1.5px solid;
+	box-shadow: 0 0 6px rgba(0,0,0,0.4);
+	text-align: center;
+}
+#letter-background{
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(180deg,#fbfbfb,#e7e7e7);
+	opacity: 1;
+}
+#letter p{
+	position: absolute;
+	width: 100%;
+	top: 20%;
+	font-size: 22px;
+	pointer-events: none;
+}
+#letter span{
+	position: absolute;
+	display: block;
+	width: 100%;
+	top: 28%;
+	font-size: 42px;
+	transform: scaleY(0.8);
+	text-align: center;
+	animation: letterArrow 0.6s ease-in-out infinite alternate;
+	pointer-events: none;
+}
+@keyframes letterArrow{
+	from{transform: translateY(0%);}
+	to  {transform: translateY(20%);}
+}
+
+
+#video-normal{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*height: 100%;*/
+	height: 0;		/* 初始时 video 尺寸为零，是为了兼容 Firofox video 控件捕捉到鼠标操作导致此处不执行的问题 */
+	z-index: 21;
+	opacity: 0;
+}
+#video-fail{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: dodgerblue;
+	opacity: 0;
+}
+#video-fail p{
+	position: absolute;
+	top: 32px;
+	width: 100%;
+	color: white;
+	font-size: 32px;
+	line-height: 48px;
+	font-weight: lighter;
+	opacity: 0;	
+}
